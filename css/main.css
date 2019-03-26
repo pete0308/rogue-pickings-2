@@ -89,7 +89,6 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items:center;
@@ -123,17 +122,12 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
 .section-one h4 {
 	padding: 0.625em 0;
-}
-
-.section-two {
-	border-left: 0.0625em solid #eee;
-	border-right: 0.0625em solid #eee;
 }
 
 .section-two h4,
@@ -179,12 +173,16 @@ footer span {
 
 @media all and (min-width:768px) {
     /* Tablet styles here */
-	.bottom-section {
-			flex-direction: row;
-			align-items: flex-start;
+.bottom-section {
+		flex-direction: row;
+		align-items: flex-start;
+	}
 
+.section-two {
+		border-left: 0.0625em solid #eee;
+		border-right: 0.0625em solid #eee;
 }
-}
+
 
 @media all and (min-width:1200px) {
     /* Desktop styles here Need to add nav inline styling. */
@@ -193,4 +191,16 @@ header nav ul {
 	justify-content: space-between;
 }
 
+.bottom-section {
+	flex-direction: row;
 }
+
+.section-two {
+		border-left: 0.0625em solid #eee;
+		border-right: 0.0625em solid #eee;
+}
+
+.section-one,
+.section-two,
+.section-three {
+	width: 33%;
